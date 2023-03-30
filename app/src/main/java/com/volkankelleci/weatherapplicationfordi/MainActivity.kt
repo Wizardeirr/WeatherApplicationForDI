@@ -5,6 +5,10 @@ import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.volkankelleci.weatherapplicationfordi.fragments.HomeFragment
+import com.volkankelleci.weatherapplicationfordi.fragments.NotifyFragment
+import com.volkankelleci.weatherapplicationfordi.fragments.SearchFragment
+import com.volkankelleci.weatherapplicationfordi.fragments.SettingsFragment
 
 
 class MainActivity : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.volkankelleci.weatherapplicationfordi
+package com.volkankelleci.weatherapplicationfordi.fragments
 
 import android.os.Bundle
 import android.view.*
