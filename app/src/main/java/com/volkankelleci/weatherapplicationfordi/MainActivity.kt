@@ -45,6 +45,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+
     }
 
     // Load fragment to Container
