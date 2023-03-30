@@ -5,9 +5,12 @@ import org.koin.core.context.startKoin
 
 class MyApplication:Application() {
 
-    fun start(){
-        startKoin{
-            modules()
+    override fun onCreate() {
+        super.onCreate()
+        fun start(){
+            startKoin{
+                modules()
+            }
         }
     }
 }

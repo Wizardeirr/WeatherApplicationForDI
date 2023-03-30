@@ -2,11 +2,10 @@ package com.volkankelleci.weatherapplicationfordi.service
 
 import com.volkankelleci.weatherapplicationfordi.data.WeatherData
 import kotlinx.coroutines.flow.Flow
-import okhttp3.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface RetrofitAPI {
+interface WeatherAPI {
 
     //URL: data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid={d97957d008b633c512729f9554ae1c35}
     //API KEY : d97957d008b633c512729f9554ae1c35
