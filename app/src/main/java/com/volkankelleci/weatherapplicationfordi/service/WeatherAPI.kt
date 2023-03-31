@@ -2,6 +2,7 @@ package com.volkankelleci.weatherapplicationfordi.service
 
 import com.volkankelleci.weatherapplicationfordi.data.WeatherData
 import kotlinx.coroutines.flow.Flow
+import okhttp3.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -14,12 +15,5 @@ interface WeatherAPI {
     suspend fun weatherSearch(
         @Query("q") cityName:String,
         @Query("appid") apiKey:String
-    ): Flow<WeatherData>
-    @GET("data/3.0/onecall")
-    suspend fun getWeatherForecast(
-        @Query ("lat") lat:Double,
-        @Query ("lon") long:Double,
-        @Query ("exclude") exclude:String,
-        @Query ("appid") apiKey:String
-    ):Flow<WeatherData>
+    ): retrofit2.Response<List<WeatherData>>
 }
