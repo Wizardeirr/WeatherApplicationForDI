@@ -2,8 +2,8 @@ package com.volkankelleci.weatherapplicationfordi.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.volkankelleci.model.WeatherData
 import com.volkankelleci.weatherapplicationfordi.Resource
-import com.volkankelleci.weatherapplicationfordi.data.WeatherData
 import com.volkankelleci.weatherapplicationfordi.repository.WeatherDataDownload
 import kotlinx.coroutines.*
 

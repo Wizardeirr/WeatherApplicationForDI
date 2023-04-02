@@ -1,13 +1,12 @@
 package com.volkankelleci.weatherapplicationfordi.fragments
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.volkankelleci.weatherapplicationfordi.data.WeatherData
+import com.volkankelleci.model.WeatherData
 import com.volkankelleci.weatherapplicationfordi.databinding.HomeRawBinding
 
-class HomeAdapter(private val weatherList : ArrayList<WeatherData>, private val listener : Listener) : RecyclerView.Adapter<HomeAdapter.RowHolder>() {
+class HomeAdapter(private var weatherList : ArrayList<WeatherData>, private val listener : Listener) : RecyclerView.Adapter<HomeAdapter.RowHolder>() {
 
     interface Listener {
         fun onItemClick(weatherData: WeatherData)
@@ -23,10 +22,14 @@ class HomeAdapter(private val weatherList : ArrayList<WeatherData>, private val 
     }
 
     override fun getItemCount(): Int {
-        return weatherList.count()
+        return weatherList.size
+
     }
 
     override fun onBindViewHolder(holder: RowHolder, position: Int) {
+        val weathers=weatherList[position]
+        holder.binding.sayHello.text=weathers.current.toString()
+
 
     }
 
