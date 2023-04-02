@@ -1,8 +1,6 @@
 package com.volkankelleci.weatherapplicationfordi.service
 
-import com.volkankelleci.weatherapplicationfordi.data.WeatherData
-import kotlinx.coroutines.flow.Flow
-import okhttp3.Response
+import com.volkankelleci.model.WeatherData
 import retrofit2.http.GET
 import retrofit2.http.Query
 

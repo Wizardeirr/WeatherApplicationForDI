@@ -1,8 +1,8 @@
 package com.volkankelleci.weatherapplicationfordi.repository
 
+import com.volkankelleci.model.WeatherData
 import com.volkankelleci.weatherapplicationfordi.Resource
 import com.volkankelleci.weatherapplicationfordi.util.Util.API_KEY
-import com.volkankelleci.weatherapplicationfordi.data.WeatherData
 import com.volkankelleci.weatherapplicationfordi.service.WeatherAPI
 
 class WeatherDataDownloader(private val api:WeatherAPI):WeatherDataDownload {
