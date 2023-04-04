@@ -1,6 +1,7 @@
 package com.volkankelleci.weatherapplicationfordi.service
 
 import com.volkankelleci.model.CryptoModel
+import com.volkankelleci.model.WeatherAppModel
 import retrofit2.Response
 import retrofit2.http.GET
 

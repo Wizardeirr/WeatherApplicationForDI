@@ -7,6 +7,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.volkankelleci.model.CryptoModel
+import com.volkankelleci.model.WeatherAppModel
 import com.volkankelleci.weatherapplicationfordi.databinding.FragmentHomeBinding
 import com.volkankelleci.weatherapplicationfordi.viewmodel.BaseViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -56,6 +57,7 @@ class HomeFragment : Fragment(),HomeAdapter.Listener {
         super.onDestroy()
         _binding
     }
+
 
     override fun onItemClick(weatherData: CryptoModel) {
         TODO("Not yet implemented")

@@ -30,7 +30,9 @@ class BaseViewModel(
                     cryptoList.value = resource
                 }
             }
+
         }
+
     }
 
     override fun onCleared() {

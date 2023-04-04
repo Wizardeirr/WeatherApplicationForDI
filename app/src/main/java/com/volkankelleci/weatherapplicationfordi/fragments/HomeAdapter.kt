@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.volkankelleci.model.CryptoModel
+import com.volkankelleci.model.WeatherAppModel
 import com.volkankelleci.weatherapplicationfordi.databinding.HomeRawBinding
 
 class HomeAdapter(private var weatherList : ArrayList<CryptoModel>, private val listener : Listener) : RecyclerView.Adapter<HomeAdapter.RowHolder>() {
@@ -29,7 +30,7 @@ class HomeAdapter(private var weatherList : ArrayList<CryptoModel>, private val 
     override fun onBindViewHolder(holder: RowHolder, position: Int) {
         val weathers=weatherList[position]
         holder.binding.sayHello.text=weathers.currency
-        holder.binding.sayNo.text=weathers.currency
+        holder.binding.sayNo.text=weathers.price
 
 
 
