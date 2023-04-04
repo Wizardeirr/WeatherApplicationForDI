@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.volkankelleci.model.WeatherData
+import com.volkankelleci.model.CryptoModel
 import com.volkankelleci.weatherapplicationfordi.databinding.FragmentHomeBinding
 import com.volkankelleci.weatherapplicationfordi.viewmodel.BaseViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -36,7 +36,8 @@ class HomeFragment : Fragment(),HomeAdapter.Listener {
         val layoutManager : RecyclerView.LayoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.layoutManager = layoutManager
 
-        println(viewModel.getDataFromAPI())
+        viewModel.getDataFromAPI()
+        observeData()
 
     }
     fun observeData(){
@@ -56,7 +57,7 @@ class HomeFragment : Fragment(),HomeAdapter.Listener {
         _binding
     }
 
-    override fun onItemClick(weatherData: WeatherData) {
+    override fun onItemClick(weatherData: CryptoModel) {
         TODO("Not yet implemented")
     }
 

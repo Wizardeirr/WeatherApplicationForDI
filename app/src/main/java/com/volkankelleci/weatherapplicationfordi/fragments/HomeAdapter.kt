@@ -3,13 +3,13 @@ package com.volkankelleci.weatherapplicationfordi.fragments
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.volkankelleci.model.WeatherData
+import com.volkankelleci.model.CryptoModel
 import com.volkankelleci.weatherapplicationfordi.databinding.HomeRawBinding
 
-class HomeAdapter(private var weatherList : ArrayList<WeatherData>, private val listener : Listener) : RecyclerView.Adapter<HomeAdapter.RowHolder>() {
+class HomeAdapter(private var weatherList : ArrayList<CryptoModel>, private val listener : Listener) : RecyclerView.Adapter<HomeAdapter.RowHolder>() {
 
     interface Listener {
-        fun onItemClick(weatherData: WeatherData)
+        fun onItemClick(weatherData: CryptoModel)
     }
 
     class RowHolder(val binding : HomeRawBinding) : RecyclerView.ViewHolder(binding.root) {
@@ -28,7 +28,9 @@ class HomeAdapter(private var weatherList : ArrayList<WeatherData>, private val 
 
     override fun onBindViewHolder(holder: RowHolder, position: Int) {
         val weathers=weatherList[position]
-        holder.binding.sayHello.text=weathers.current.toString()
+        holder.binding.sayHello.text=weathers.currency
+        holder.binding.sayNo.text=weathers.currency
+
 
 
     }

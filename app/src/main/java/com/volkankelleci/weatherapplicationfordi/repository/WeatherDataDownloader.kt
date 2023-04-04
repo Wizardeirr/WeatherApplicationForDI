@@ -1,14 +1,14 @@
 package com.volkankelleci.weatherapplicationfordi.repository
 
-import com.volkankelleci.model.WeatherData
+import com.volkankelleci.model.CryptoModel
 import com.volkankelleci.weatherapplicationfordi.Resource
-import com.volkankelleci.weatherapplicationfordi.util.Util.API_KEY
 import com.volkankelleci.weatherapplicationfordi.service.WeatherAPI
 
+
 class WeatherDataDownloader(private val api:WeatherAPI):WeatherDataDownload {
-    override suspend fun downloadWeatherDatas(): Resource<List<WeatherData>> {
+    override suspend fun downloadWeatherDatas():Resource<List<CryptoModel>>{
         return try {
-            val response = api.weatherSearch("London",API_KEY)
+            val response = api.getData()
             if (response.isSuccessful) {
                 response.body()?.let {
                     return@let Resource.success(it)

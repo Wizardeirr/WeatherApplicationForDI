@@ -2,7 +2,7 @@ package com.volkankelleci.weatherapplicationfordi.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.volkankelleci.model.WeatherData
+import com.volkankelleci.model.CryptoModel
 import com.volkankelleci.weatherapplicationfordi.Resource
 import com.volkankelleci.weatherapplicationfordi.repository.WeatherDataDownload
 import kotlinx.coroutines.*
@@ -10,7 +10,7 @@ import kotlinx.coroutines.*
 class BaseViewModel(
     private val weatherDataDownload: WeatherDataDownload
 ):ViewModel() {
-    val cryptoList = MutableLiveData<Resource<List<WeatherData>>>()
+    val cryptoList = MutableLiveData<Resource<List<CryptoModel>>>()
     val cryptoError = MutableLiveData<Resource<Boolean>>()
     val cryptoLoading = MutableLiveData<Resource<Boolean>>()
     private var job : Job? = null
@@ -30,9 +30,7 @@ class BaseViewModel(
                     cryptoList.value = resource
                 }
             }
-
         }
-
     }
 
     override fun onCleared() {
